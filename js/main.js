@@ -376,7 +376,7 @@ function startFight() {
   document.getElementById('nombre-resultado').textContent = `${resultado.nombre}`;
   mostrarResultado();
   if (resultado === userCaballo) {
-    updateBalance(betAmount, true);
+    updateBalance(betAmount * 2, true);
   } else {
     updateBalance(betAmount, false);
   }
