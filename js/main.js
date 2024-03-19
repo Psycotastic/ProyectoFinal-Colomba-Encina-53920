@@ -319,12 +319,11 @@ function init() {
 function updateBalance(betAmount, wonBet) {
   balance -= parseFloat(betAmount);
   if (wonBet) {
-    balance += parseFloat(betAmount);
+    balance += parseFloat(betAmount * 2);
   }
   document.getElementById('balance').textContent = `BALANCE ACTUAL: ${balance} dolarucos`;
   saveBalance();
 }
-
 
 // La máquina escoge un caballo al azar
 function getRandomCaballo() {
