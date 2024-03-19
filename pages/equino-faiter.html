@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equino Faiter</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+	<nav>
+		<button id="detener-musica">
+			<img id="boton-imagen" src="../img/musica.png" alt="Detener música">
+		</button>
+		<p id="balance"></p>
+	</nav>
+	<main>
+		<h2>¡Escoge a tu luchador!</h2>
+		<div id="caballos-container"></div>
+		<p id="resultado">
+			<span id="nombre-resultado"></span><br>
+			ha ganado
+		</p>
+		<div class="apuesta">
+			<div class="seleccion">
+				<img id="clima" src="../img/soleado.png" alt="Clima">
+				<div id="selected-caballo"></div>
+				<input type="number" id="betAmount" min="0" value="0">
+			</div>
+			<button onclick="startFight()" class="start">Start</button>
+			<button id="resetBalance">Reiniciar balance</button>
+		</div>
+	</main>
+
+	<audio id="musica-fondo" src="../audio/character-select.mp3" autoplay loop volume="0.5">
+    </audio>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.2.0/math.js"></script>
+<script src="../js/main.js" type="text/javascript"></script>
+<script src="../js/musica.js" type="text/javascript"></script>
+</html>

@@ -1,0 +1,329 @@
+body, ul, li, p, a:link, label {
+    font-family: "VT323";
+}
+
+* {
+    margin: 0;
+}
+:root {
+    --primary: #fffae1;
+    --secondary: #faeb5a;
+    --tertiary: #fbbe0e;
+    --quaternary: #e1371e;
+    --quinary: #cd1419;
+  }
+
+  body {
+    background-image: url(../img/fondo.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/*Index*/
+
+#index #miVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#index .ingresar {
+  font-size: 9rem;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--primary);
+  cursor: pointer;
+  margin: 0 2%;
+  border-bottom: 6px inset rgba(0,0,0,.5);
+  border-left: 6px inset rgba(0,0,0,.5);
+  border-right: 6px inset rgba(255,255,255,.5);
+  border-top: 6px inset rgba(255,255,255,.5);
+  opacity: 0.75;
+  background: var(--tertiary);
+}
+
+#index .ingresar:hover {
+  opacity: 1;  
+}
+
+#index .ingresar:active {
+  border-top: 6px inset rgba(0,0,0,.5);
+	border-right: 6px inset rgba(0,0,0,.5);
+	border-left: 6px inset rgba(255,255,255,.5);
+	border-bottom: 6px inset rgba(255,255,255,.5);
+}
+
+/*Equino FAITER*/
+
+nav {
+    background-color: var(--tertiary);
+    padding: 1vh;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav #detener-musica {
+  background: none;
+  border: none;
+}
+nav #detener-musica img {
+  width: 30px;
+  height: 30px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+nav #detener-musica img:active {
+  opacity: 0.75;
+}
+
+nav #balance {
+    text-align: right;
+    color: var(--quaternary);
+    font-size: 2rem;
+}
+
+main #caballos-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main h2 {
+  padding: 2%;
+  font-size: 10vw;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--primary);
+  text-shadow: 3px 3px 0 var(--secondary), 6px 6px 0 var(--tertiary),
+  9px 9px var(--quaternary), 12px 12px 0 var(--quinary);
+  animation: shadows 1.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+}
+  
+  @keyframes shadows {
+    0% {
+      text-shadow: none;
+    }
+    10% {
+      transform: translate(-3px, -3px);
+      text-shadow: 3px 3px 0 var(--secondary);
+    }
+    20% {
+      transform: translate(-6px, -6px);
+      text-shadow: 3px 3px 0 var(--secondary),
+        6px 6px 0 var(--tertiary);
+    }
+    30% {
+      transform: translate(-9px, -9px);
+      text-shadow: 3px 3px 0 var(--secondary),
+        6px 6px 0 var(--tertiary), 9px 9px var(--quaternary);
+    }
+    40% {
+      transform: translate(-12px, -12px);
+      text-shadow: 3px 3px 0 var(--secondary),
+        6px 6px 0 var(--tertiary), 9px 9px var(--quaternary),
+        12px 12px 0 var(--quinary);
+    }
+    50% {
+      transform: translate(-12px, -12px);
+      text-shadow: 3px 3px 0 var(--secondary),
+        6px 6px 0 var(--tertiary), 9px 9px var(--quaternary),
+        12px 12px 0 var(--quinary);
+    }
+    60% {
+      text-shadow: 3px 3px 0 var(--secondary),
+        6px 6px 0 var(--tertiary), 9px 9px var(--quaternary),
+        12px 12px 0 var(--quinary);
+    }
+    70% {
+      text-shadow: 3px 3px 0 var(--secondary),
+        6px 6px 0 var(--tertiary), 9px 9px var(--quaternary);
+    }
+    80% {
+      text-shadow: 3px 3px 0 var(--secondary),
+        6px 6px 0 var(--tertiary);
+    }
+    90% {
+      text-shadow: 3px 3px 0 var(--secondary);
+    }
+    100% {
+      text-shadow: none;
+    }
+  }
+
+main .luchador {
+    flex: 0 0 15%;
+    padding: 2%;
+}
+
+main .luchador img {
+    width: 100%;
+}
+
+main .luchador p {
+  background: var(--primary);
+}
+
+main .luchador input[type="radio"] {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+main .luchador label {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: normal;
+    text-align: center; 
+    font-size: 0;
+  }
+
+  
+main .luchador label::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border: 10px outset var(--secondary);
+    border-radius: 5px;
+    background: rgba(0,0,0,0);
+  }
+
+main .luchador input[type="radio"]:checked + label::before {
+    background-color: none;
+    content: " ";
+    border: 10px inset var(--quaternary);
+    background: rgba(225, 55, 30, 0.25);
+    border-radius: 5px;
+  }
+  
+#resultado {
+  position: fixed;
+  color: var(--primary);
+  width: 100%;
+  background: var(--quinary);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vh;
+  opacity: 0;
+  text-transform: uppercase;
+  text-shadow: 2px 4px var(--quinary);
+  text-align: center;
+  display: none;
+  padding: 2%;
+}
+
+#resultado span {
+  font-size: 10vh;
+  color: var(--primary);
+  text-shadow: 3px 3px 0 var(--secondary), 6px 6px 0 var(--tertiary),
+  9px 9px var(--quaternary), 12px 12px 0 var(--quinary);
+  animation: shadows 1.2s ease-in infinite;
+}
+
+@keyframes aparecer {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+#resultado.aparecer {
+  animation: aparecer 10s ease-in-out;
+  display: block;
+}
+
+.apuesta {
+  position: fixed;
+  bottom: 0;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 25px 5%;
+  background-color: var(--quaternary);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.apuesta .seleccion {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 0 3% 0;
+  width: 100%;
+}
+
+.seleccion img {
+  width: 100px;
+  height: 100px;
+}
+
+.seleccion #selected-caballo {
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  color: var(--quinary);
+  -webkit-text-stroke: 1px var(--primary);
+	text-shadow: 4px 4px var(--secondary);
+}
+
+.seleccion #betAmount {
+  font-size: 3rem;
+  text-align: center;
+  width: 4rem;
+  height: 4rem;
+  background: var(--primary);
+  border: 5px inset var(--tertiary);
+}
+
+.apuesta .start, .apuesta #resetBalance {
+  font-family: "VT323";
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--primary);
+	cursor: pointer;
+  margin: 0 2%;
+	border-bottom: 6px inset rgba(0,0,0,.5);
+	border-left: 6px inset rgba(0,0,0,.5);
+	border-right: 6px inset rgba(255,255,255,.5);
+	border-top: 6px inset rgba(255,255,255,.5);
+  opacity: 0.75;
+}
+.apuesta .start:hover, .apuesta #resetBalance:hover {
+  opacity: 1;  
+}
+
+.apuesta .start:active, .apuesta #resetBalance:active {
+  border-top: 6px inset rgba(0,0,0,.5);
+	border-right: 6px inset rgba(0,0,0,.5);
+	border-left: 6px inset rgba(255,255,255,.5);
+	border-bottom: 6px inset rgba(255,255,255,.5);
+}
+
+.apuesta .start {
+  background: var(--tertiary);
+}
+
+.apuesta #resetBalance {
+  background: var(--quinary);
+}
