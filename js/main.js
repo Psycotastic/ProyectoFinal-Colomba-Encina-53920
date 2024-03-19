@@ -217,6 +217,17 @@ const caballos = [{
   image: {
     url: "../img/llama2.png",
   }
+},
+{
+  nombre: "Juan",
+  fuerza: 100,
+  agilidad: 60,
+  resistencia: 5,
+  tamaño: 2,
+  experiencia: 10,
+  image: {
+    url: "../img/juan.png",
+  }
 }
 ];
 
